@@ -1,0 +1,48 @@
+.licencia-usuarios-container {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+table th {
+    background-color: #0ABD8C;
+    color: white;
+}
+
+table td {
+    background-color: #fff;
+}
+
+/* Para hacer la tabla 'Vista Detallada' más grande */
+.vista-detallada {
+    font-size: 1.2em; /* Aumentar el tamaño de la fuente */
+}
+
+.vista-general th, .vista-detallada th {
+    text-align: center;
+}

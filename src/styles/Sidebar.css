@@ -1,0 +1,95 @@
+/* Ajustes del Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 20px;
+  height: 100vh;
+  position: fixed;
+  top: 70px; /* Ajusta la separación del navbar */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Menú principal */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Elementos del menú principal */
+.menu li {
+  margin: 10px 0;
+}
+
+/* Enlaces principales del menú */
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+/* Íconos al lado del texto */
+.menu a i {
+  margin-right: 10px;
+  color: #0ABD8C;
+}
+
+/* Submenús indentados */
+.submenu {
+  list-style: none;
+  padding-left: 20px; /* Indentación para submenús */
+  font-size: 16px;
+}
+
+/* Estilos para los elementos finales de la jerarquía */
+.submenu .submenu {
+  padding-left: 30px; /* Mayor indentación para los niveles finales */
+  font-size: 14px; /* Fuente más pequeña */
+  color: #666; /* Color más claro para el texto */
+}
+
+.submenu .submenu li {
+  padding: 5px 0; /* Espacio entre los elementos finales */
+}
+
+/* Hover y estado activo de los enlaces */
+.menu a:hover,
+.submenu a:hover {
+  background-color: #d8d8d8;
+}
+
+.menu a.active {
+  background-color: #0ABD8C;
+  color: white;
+}
+
+/* Estilo del botón de logout */
+.logout {
+  background-color: #0ABD8C;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: auto;
+}
+
+.logout a {
+  color: white;
+  text-decoration: none;
+}
+
+.logout:hover {
+  background-color: #333;
+}

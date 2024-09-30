@@ -1,0 +1,129 @@
+import React from 'react';
+import { Line } from 'react-chartjs-2';
+import 'chart.js/auto';
+import './RiesgoEnElTiempo.css';  // Asegúrate de crear el archivo CSS
+
+const RiesgoEnElTiempo = () => {
+    // Datos del gráfico de líneas
+    const data = {
+        labels: ['28/02/2020', '09/03/2020', '16/03/2020', '30/03/2020', '05/04/2020'],
+        datasets: [
+            {
+                label: 'Alto',
+                data: [3430, 2790, 2674, 2708, 2765],
+                borderColor: '#FF6384',
+                backgroundColor: 'rgba(255,99,132,0.2)',
+                fill: true,
+            },
+            {
+                label: 'Medio',
+                data: [1698, 1394, 1386, 1400, 1332],
+                borderColor: '#FFCE56',
+                backgroundColor: 'rgba(255,206,86,0.2)',
+                fill: true,
+            },
+            {
+                label: 'Bajo',
+                data: [46, 46, 46, 46, 46],
+                borderColor: '#36A2EB',
+                backgroundColor: 'rgba(54,162,235,0.2)',
+                fill: true,
+            },
+        ],
+    };
+
+    const options = {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'right',
+            },
+        },
+        scales: {
+            y: {
+                beginAtZero: true,
+            },
+        },
+    };
+
+    return (
+        <div className="riesgo-container">
+            <h1>Riesgo en el Tiempo</h1>
+
+            {/* Filtros de fecha y proceso */}
+            <div className="input-group">
+                <label htmlFor="fechaRiesgo">Fecha de Riesgo:</label>
+                <input type="date" id="fechaRiesgo" />
+                <label htmlFor="proceso">Proceso Empresarial:</label>
+                <select id="proceso">
+                    <option>Proceso Empresarial 1</option>
+                    <option>Proceso Empresarial 2</option>
+                </select>
+                <button className="buscar-btn">Buscar</button>
+                <button className="export-btn">Exportar como imagen</button>
+            </div>
+
+            {/* Gráfico de líneas */}
+            <div className="chart-container">
+                <h2>Riesgos en el Tiempo</h2>
+                <Line data={data} options={options} />
+            </div>
+
+            {/* Tabla de datos */}
+            <div className="table-container">
+                <h2>Datos</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Alto</th>
+                            <th>Media</th>
+                            <th>Bajo</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>28/02/2020</td>
+                            <td>3,430</td>
+                            <td>1,698</td>
+                            <td>46</td>
+                            <td>5,174</td>
+                        </tr>
+                        <tr>
+                            <td>09/03/2020</td>
+                            <td>2,790</td>
+                            <td>1,394</td>
+                            <td>46</td>
+                            <td>4,230</td>
+                        </tr>
+                        <tr>
+                            <td>16/03/2020</td>
+                            <td>2,674</td>
+                            <td>1,386</td>
+                            <td>46</td>
+                            <td>4,106</td>
+                        </tr>
+                        <tr>
+                            <td>30/03/2020</td>
+                            <td>2,708</td>
+                            <td>1,400</td>
+                            <td>46</td>
+                            <td>4,154</td>
+                        </tr>
+                        <tr>
+                            <td>05/04/2020</td>
+                            <td>2,765</td>
+                            <td>1,332</td>
+                            <td>46</td>
+                            <td>4,443</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button className="export-btn">Exportar como Excel</button>
+            </div>
+        </div>
+    );
+};
+
+export default RiesgoEnElTiempo;

@@ -1,0 +1,71 @@
+/* Ajustes para el Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 70px;
+}
+
+/* Ajustes del contenedor principal para que no se solape con el navbar */
+.main-content {
+  margin-top: 80px;
+  margin-left: 250px;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Ajustes del logo */
+.navbar .logo img {
+  height: 50px;
+  margin-left: 20px;
+}
+
+/* Barra de búsqueda */
+.navbar .search-bar {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative; /* Importante para posicionar el ícono */
+}
+
+.navbar .search-bar input {
+  width: 40%;
+  padding: 8px 20px 8px 40px; /* Deja espacio para el ícono en el padding izquierdo */
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #f4f4f4;
+  outline: none;
+}
+
+/* Pseudo-elemento para el ícono */
+.navbar .search-bar::before {
+  content: url('/public/lupa.svg'); /* Reemplaza con la ruta correcta */
+  position: absolute;
+  left: 15px; /* Ajusta la posición del ícono */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none; /* Asegura que no interfiera con el input */
+}
+
+/* Información del usuario */
+.navbar .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .user-info img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
