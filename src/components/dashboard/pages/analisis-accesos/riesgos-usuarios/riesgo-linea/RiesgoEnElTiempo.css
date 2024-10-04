@@ -1,4 +1,4 @@
-.riesgo-container {
+/* .riesgo-container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
@@ -78,4 +78,131 @@
     padding: 10px 15px;
     border-radius: 4px;
     color: white;
+} */
+
+/* Estilos generales para el contenedor */
+.riesgo-container {
+    padding: 40px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+}
+
+.riesgo-container-card{
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding:15px ;
+}
+
+/* Estilo del título */
+.riesgo-container h1 {
+    
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    padding: 20px;
+}
+
+/* Estilos del grupo de entradas */
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-group input,
+.input-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.input-group .buscar-btn,
+.input-group .export-btn {
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input-group .buscar-btn:hover,
+.input-group .export-btn:hover {
+    background-color: #218838;
+}
+
+/* Estilo del contenedor de gráficos */
+.chart-container {
+    margin-bottom: 30px;
+}
+
+.chart-container h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilos de la tabla */
+.table-container {
+    margin-top: 20px;
+}
+
+.table-container h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-container th,
+.table-container td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.table-container th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #333;
+}
+
+.table-container td {
+    color: #555;
+}
+
+.table-container .export-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.table-container .export-btn:hover {
+    background-color: #218838;
 }

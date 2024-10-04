@@ -48,17 +48,13 @@ const RiesgoEnElTiempo = () => {
 
     return (
         <div className="riesgo-container">
+            <div className="riesgo-container-card">
             <h1>Riesgo en el Tiempo</h1>
 
             {/* Filtros de fecha y proceso */}
             <div className="input-group">
                 <label htmlFor="fechaRiesgo">Fecha de Riesgo:</label>
                 <input type="date" id="fechaRiesgo" />
-                <label htmlFor="proceso">Proceso Empresarial:</label>
-                <select id="proceso">
-                    <option>Proceso Empresarial 1</option>
-                    <option>Proceso Empresarial 2</option>
-                </select>
                 <button className="buscar-btn">Buscar</button>
                 <button className="export-btn">Exportar como imagen</button>
             </div>
@@ -121,6 +117,7 @@ const RiesgoEnElTiempo = () => {
                     </tbody>
                 </table>
                 <button className="export-btn">Exportar como Excel</button>
+              </div>
             </div>
         </div>
     );

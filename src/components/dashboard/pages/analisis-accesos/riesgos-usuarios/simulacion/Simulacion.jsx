@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import './Simulacion.css';
 
 const Simulacion = () => {
-    // Estado para manejar los filtros
     const [estadoUsuarios, setEstadoUsuarios] = useState({
         activo: true,
         inactivo: false,
@@ -14,7 +13,6 @@ const Simulacion = () => {
         todos: true,
     });
 
-    // Función para manejar los cambios en los filtros
     const handleEstadoUsuariosChange = (e) => {
         setEstadoUsuarios({
             ...estadoUsuarios,
@@ -31,38 +29,47 @@ const Simulacion = () => {
 
     return (
         <div className="simulacion-container">
-            <h1>Usuarios</h1>
-            <div className="input-group">
-                <label htmlFor="usuarios">Usuarios:</label>
-                <input type="text" id="usuarios" />
-                <button className="buscar-btn">Buscar</button>
-            </div>
+            <div className="Simulacion-card-principal">
+                {/* Primera tarjeta: Usuarios */}
+                <div className="simulacion-card-1">
+                    <h1>Usuarios</h1>
+                    <div className="input-group-simulacion">
+                        <label htmlFor="usuarios">Usuarios:</label>
+                        <input type="text" id="usuarios" />
+                        <button className="buscar-btn">Buscar</button>
+                    </div>
 
-            <div className="filtros-container">
-                <div>
-                    <label>Estado Usuarios:</label>
-                    <input type="checkbox" name="activo" checked={estadoUsuarios.activo} onChange={handleEstadoUsuariosChange} /> Activo
-                    <input type="checkbox" name="inactivo" checked={estadoUsuarios.inactivo} onChange={handleEstadoUsuariosChange} /> Inactivo
+                    <div className="filtros-container">
+                        <div>
+                            <label>Estado Usuarios:</label>
+                            <input type="checkbox" name="activo" checked={estadoUsuarios.activo} onChange={handleEstadoUsuariosChange} /> Activo
+                            <input type="checkbox" name="inactivo" checked={estadoUsuarios.inactivo} onChange={handleEstadoUsuariosChange} /> Inactivo
+                        </div>
+
+                        <div>
+                            <label>Criticidad del Riesgo:</label>
+                            <input type="checkbox" name="alto" checked={critRiesgo.alto} onChange={handleCritRiesgoChange} /> Alto
+                            <input type="checkbox" name="medio" checked={critRiesgo.medio} onChange={handleCritRiesgoChange} /> Medio
+                            <input type="checkbox" name="bajo" checked={critRiesgo.bajo} onChange={handleCritRiesgoChange} /> Bajo
+                            <input type="checkbox" name="todos" checked={critRiesgo.todos} onChange={handleCritRiesgoChange} /> Todos
+                        </div>
+                    </div>
                 </div>
 
-                <div>
-                    <label>Criticidad del Riesgo:</label>
-                    <input type="checkbox" name="alto" checked={critRiesgo.alto} onChange={handleCritRiesgoChange} /> Alto
-                    <input type="checkbox" name="medio" checked={critRiesgo.medio} onChange={handleCritRiesgoChange} /> Medio
-                    <input type="checkbox" name="bajo" checked={critRiesgo.bajo} onChange={handleCritRiesgoChange} /> Bajo
-                    <input type="checkbox" name="todos" checked={critRiesgo.todos} onChange={handleCritRiesgoChange} /> Todos
-                </div>
+                {/* Segunda tarjeta: Simulación Asignación a usuarios */}
+                <div className="simulacion-card-2">
+                    <h1>Simulación Asignación a usuarios</h1>
+                    <div>
+                        <label htmlFor="rol">Rol:</label>
+                        <input type="text" id="rol" />
+                        <button className="buscar-btn">Buscar</button>
+                    </div>
 
-                <div>
-                    <label htmlFor="rol">Rol:</label>
-                    <input type="text" id="rol" />
-                    <button className="buscar-btn">Buscar</button>
-                </div>
-
-                <div>
-                    <label htmlFor="transaccion">Transacción:</label>
-                    <input type="text" id="transaccion" />
-                    <button className="buscar-btn">Buscar</button>
+                    <div>
+                        <label htmlFor="transaccion">Transacción:</label>
+                        <input type="text" id="transaccion" />
+                        <button className="buscar-btn">Buscar</button>
+                    </div>
                 </div>
             </div>
 

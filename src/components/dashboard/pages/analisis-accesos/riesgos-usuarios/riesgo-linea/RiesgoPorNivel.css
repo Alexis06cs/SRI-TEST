@@ -10,16 +10,19 @@
 
 .input-group {
     display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    align-items: center; /* Alinea verticalmente los elementos */
+    gap: 10px; /* Espacio entre los elementos */
 }
 
-.input-group input {
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.input-group label {
+    margin-right: 10px; /* Espacio entre la etiqueta y el input */
 }
+
+.buscar-btn, .export-btn {
+    padding: 5px 10px; /* Añade un poco de padding a los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+}
+
 
 .buscar-btn, .export-btn {
     padding: 10px 15px;
@@ -35,7 +38,7 @@
 }
 
 .chart-container {
-    margin-top: 20px;
+    margin-top: 70px;
     text-align: center;
 }
 
@@ -85,4 +88,40 @@
     padding: 10px 15px;
     border-radius: 4px;
     color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }

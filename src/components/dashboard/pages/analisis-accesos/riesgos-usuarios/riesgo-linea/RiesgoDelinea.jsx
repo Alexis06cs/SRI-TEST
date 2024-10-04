@@ -4,7 +4,7 @@ import React from 'react';
 const RiesgoDeLinea = () => {
     return (
         <h1>
-            Riesgo xd nivel
+            Riesgos
         </h1>
     );
 };

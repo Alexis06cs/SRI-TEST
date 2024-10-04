@@ -4,26 +4,13 @@ import Card from '../../../../cards/Card'; // Importa el componente Card
 
 const RiesgosUsuarios = () => {
   return (
-    <div className="page-content">
-      <h1>Riesgos Usuarios</h1>
-      <div className="cards-container">
-        <Card 
-          title="Riesgos en línea" 
-          imageSrc="/imagenes/img_card.png" 
-          buttonText="Visualizar" 
-        />
-        <Card 
-          title="Riesgos General" 
-          imageSrc="/imagenes/img_card.png" 
-          buttonText="Visualizar" 
-        />
-        <Card 
-          title="Simulación" 
-          imageSrc="/imagenes/img_card.png" 
-          buttonText="Visualizar" 
-        />
+    <div className="dashboard-main">
+          <div className="card-container">
+            <Card title="Riesgos Usuarios por Proceso Empresarial" imageSrc="/imagenes/img_card.png" />
+            <Card title="Riesgo por Nivel" imageSrc="/imagenes/img_card.png" />
+            <Card title="Riesgo en el Tiempo" imageSrc="/imagenes/img_card.png" />
+          </div>
       </div>
-    </div>
   );
 };
 

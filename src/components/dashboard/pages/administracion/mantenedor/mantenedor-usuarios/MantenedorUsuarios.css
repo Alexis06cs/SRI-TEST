@@ -1,0 +1,109 @@
+/* Contenedor principal */
+.mu_container{
+    padding: 20px;
+
+}
+.usuarios-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título */
+.usuarios-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botón agregar usuario */
+.btn-agregar {
+    background-color: #11c998;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.btn-agregar:hover {
+    background-color: #0fa984;
+}
+
+/* Tabla de usuarios */
+.usuarios-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.usuarios-table th,
+.usuarios-table td {
+    padding: 8px 10px; /* Ajusta el padding vertical para reducir la altura */
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Encabezado de la tabla */
+.usuarios-table th {
+    background-color: #0fa984;
+    color: white;
+    font-weight: bold;
+}
+
+/* Celdas de la tabla */
+.usuarios-table td {
+    color: #555;
+    padding: 0px 1px;
+}
+
+/* Botones de acciones */
+.btn-cambiar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-editar {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-eliminar {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Hover de los botones */
+.btn-cambiar:hover {
+    background-color: #218838;
+}
+
+.btn-editar:hover {
+    background-color: #138496;
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333;
+}

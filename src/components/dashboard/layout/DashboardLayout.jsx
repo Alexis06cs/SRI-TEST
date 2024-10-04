@@ -8,12 +8,12 @@ const DashboardLayout = () => {
   return (
     <div className="dashboard-layout">
       <Navbar />
-      <div className="main-section">
-        <Sidebar />
-        <div className="main-content">
+      <Sidebar />
+      <main className="main">
+        <section className="main__section main__section--outlet">
           <Outlet />  {/* Aquí se renderizan las diferentes páginas */}
-        </div>
-      </div>
+        </section>
+      </main>
     </div>
   );
 };

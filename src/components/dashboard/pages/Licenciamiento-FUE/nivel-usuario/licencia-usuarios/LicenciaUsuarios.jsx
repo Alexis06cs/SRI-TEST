@@ -4,7 +4,7 @@ import './LicenciaUsuarios.css';
 const LicenciaUsuarios = () => {
     return (
         <div className="licencia-usuarios-container">
-            <div className="card">
+            <div className="card-1">
                 <h2>Vista General</h2>
                 <table className="vista-general">
                     <thead>
@@ -30,7 +30,7 @@ const LicenciaUsuarios = () => {
                 </table>
             </div>
 
-            <div className="card">
+            <div className="card-2">
                 <h2>Vista Detallada</h2>
                 <table className="vista-detallada">
                     <thead>

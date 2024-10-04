@@ -1,0 +1,99 @@
+/* Contenedor principal */
+.me_container{
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+.empresa-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del título */
+.empresa-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Botón agregar usuario */
+.btn-agregar {
+    background-color: #11c998;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+}
+
+.btn-agregar:hover {
+    background-color: #0fa984;
+}
+
+/* Tabla */
+.empresa-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.empresa-table th,
+.empresa-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Encabezado de la tabla */
+.empresa-table th {
+    background-color: #11c998;
+    color: white;
+    font-weight: bold;
+}
+
+/* Celdas de la tabla */
+.empresa-table td {
+    color: #555;
+}
+
+/* Imagen de la empresa */
+.empresa-logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Botones de acciones */
+.btn-editar {
+    background-color: #11c998;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.btn-eliminar {
+    background-color: #F86C6B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-editar:hover {
+    background-color: #218838;
+}
+
+.btn-eliminar:hover {
+    background-color: #F86C6B;
+}

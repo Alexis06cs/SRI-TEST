@@ -40,7 +40,7 @@
     background-color: #099e76;
   }
   
-  /* Ajuste del layout general */
+  /* Ajuste del layout general
   .dashboard-main {
     display: flex;
     flex-wrap: wrap;
@@ -48,5 +48,5 @@
     gap: 20px;
     padding: 20px;
   }
-  
+  */
   
