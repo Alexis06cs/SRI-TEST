@@ -36,6 +36,7 @@ import CargaFue from './components/dashboard/pages/administracion/cargaFUE/Carga
 import MantenedorRuselet from './components/dashboard/pages/administracion/cargaFUE/MantenedordeRuleset/MantenedorRuleset';
 import CargaTransacciones from './components/dashboard/pages/administracion/AccesosCriticos/CargaTransacciones/CargaTransacciones';
 import TransaccionesCriticas from './components/dashboard/pages/analisis-accesos/accesos-criticos/transacciones-criticas/TransaccionesCriticas';
+import ObjetosCriticos from './components/dashboard/pages/analisis-accesos/accesos-criticos/objetivos-criticos/objetivosCriticos';
 
 function App() {
   return (
@@ -65,6 +66,8 @@ function App() {
 
           <Route path="analisis-accesos/accesos-criticos" element={<AccesosCriticos />} />
           <Route path="analisis-accesos/accesos-criticos/transacciones-criticas" element={<TransaccionesCriticas />} />
+          <Route path="analisis-accesos/accesos-criticos/objetos-criticos" element={<ObjetosCriticos />} />
+
 
             {/* Licenciamiento  */}
           <Route path="licenciamiento-fue" element={<LicenciamientoFue />} />

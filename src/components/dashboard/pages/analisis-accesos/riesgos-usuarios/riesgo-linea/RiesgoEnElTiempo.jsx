@@ -2,6 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './RiesgoEnElTiempo.css';  // Asegúrate de crear el archivo CSS
+import TrafficSourcesChart from '../../../../../charts/dashboard/TrafficSourcesChart';
 
 const RiesgoEnElTiempo = () => {
     // Datos del gráfico de líneas
@@ -62,7 +63,7 @@ const RiesgoEnElTiempo = () => {
             {/* Gráfico de líneas */}
             <div className="chart-container">
                 <h2>Riesgos en el Tiempo</h2>
-                <Line data={data} options={options} />
+                <TrafficSourcesChart/>
             </div>
 
             {/* Tabla de datos */}
@@ -116,7 +117,7 @@ const RiesgoEnElTiempo = () => {
                         </tr>
                     </tbody>
                 </table>
-                <button className="export-btn">Exportar como Excel</button>
+               
               </div>
             </div>
         </div>

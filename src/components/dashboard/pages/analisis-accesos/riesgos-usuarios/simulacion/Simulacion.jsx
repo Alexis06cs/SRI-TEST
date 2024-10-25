@@ -29,10 +29,10 @@ const Simulacion = () => {
 
     return (
         <div className="simulacion-container">
-            <div className="Simulacion-card-principal">
-                {/* Primera tarjeta: Usuarios */}
-                <div className="simulacion-card-1">
-                    <h1>Usuarios</h1>
+            <h2>Usuarios</h2>
+            <div className="simulacion-filtros">
+                {/* Primera sección: Usuarios */}
+                <div className="simulacion-seccion">
                     <div className="input-group-simulacion">
                         <label htmlFor="usuarios">Usuarios:</label>
                         <input type="text" id="usuarios" />
@@ -40,32 +40,35 @@ const Simulacion = () => {
                     </div>
 
                     <div className="filtros-container">
-                        <div>
+                        <div className="estado-usuarios">
                             <label>Estado Usuarios:</label>
-                            <input type="checkbox" name="activo" checked={estadoUsuarios.activo} onChange={handleEstadoUsuariosChange} /> Activo
-                            <input type="checkbox" name="inactivo" checked={estadoUsuarios.inactivo} onChange={handleEstadoUsuariosChange} /> Inactivo
+                            <div className="checkbox-group">
+                                <input type="checkbox" name="activo" checked={estadoUsuarios.activo} onChange={handleEstadoUsuariosChange} /> Activo
+                                <input type="checkbox" name="inactivo" checked={estadoUsuarios.inactivo} onChange={handleEstadoUsuariosChange} /> Inactivo
+                            </div>
                         </div>
 
-                        <div>
+                        <div className="criticidad-riesgo">
                             <label>Criticidad del Riesgo:</label>
-                            <input type="checkbox" name="alto" checked={critRiesgo.alto} onChange={handleCritRiesgoChange} /> Alto
-                            <input type="checkbox" name="medio" checked={critRiesgo.medio} onChange={handleCritRiesgoChange} /> Medio
-                            <input type="checkbox" name="bajo" checked={critRiesgo.bajo} onChange={handleCritRiesgoChange} /> Bajo
-                            <input type="checkbox" name="todos" checked={critRiesgo.todos} onChange={handleCritRiesgoChange} /> Todos
+                            <div className="checkbox-group">
+                                <input type="checkbox" name="alto" checked={critRiesgo.alto} onChange={handleCritRiesgoChange} /> Alto
+                                <input type="checkbox" name="medio" checked={critRiesgo.medio} onChange={handleCritRiesgoChange} /> Medio
+                                <input type="checkbox" name="bajo" checked={critRiesgo.bajo} onChange={handleCritRiesgoChange} /> Bajo
+                                <input type="checkbox" name="todos" checked={critRiesgo.todos} onChange={handleCritRiesgoChange} /> Todos
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Segunda tarjeta: Simulación Asignación a usuarios */}
-                <div className="simulacion-card-2">
-                    <h1>Simulación Asignación a usuarios</h1>
-                    <div>
+                {/* Segunda sección: Simulación Asignación a usuarios */}
+                <div className="simulacion-seccion">
+                    <div className="input-group-simulacion">
                         <label htmlFor="rol">Rol:</label>
                         <input type="text" id="rol" />
                         <button className="buscar-btn">Buscar</button>
                     </div>
 
-                    <div>
+                    <div className="input-group-simulacion">
                         <label htmlFor="transaccion">Transacción:</label>
                         <input type="text" id="transaccion" />
                         <button className="buscar-btn">Buscar</button>

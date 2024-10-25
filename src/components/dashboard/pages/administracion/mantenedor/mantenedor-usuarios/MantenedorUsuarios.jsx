@@ -1,7 +1,10 @@
-import React from 'react';
-import './MantenedorUsuarios.css'; // Asegúrate de crear este archivo para los estilos
+import React, { useState } from 'react';
+import './MantenedorUsuarios.css'; // Asegúrate de que este archivo contiene los estilos
 
 const MantenedorUsuarios = () => {
+  const [modalEditarVisible, setModalEditarVisible] = useState(false);
+  const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);
+
   // Datos ficticios para los usuarios
   const usuarios = [
     { id: 1, username: 'demo', administrador: 'SI', permisos: 'Reportes Usuarios, Parámetros de Seguridad', empresa: 'Minuto verde' },
@@ -13,41 +16,140 @@ const MantenedorUsuarios = () => {
     { id: 7, username: 'demo', administrador: 'NO', permisos: '-', empresa: 'Minuto verde' },
   ];
 
+  // Función para mostrar el modal y pasar los datos del usuario seleccionado
+  const showModalEditar = (usuario) => {
+    setUsuarioSeleccionado(usuario);
+    setModalEditarVisible(true);
+  };
+
+  // Función para ocultar el modal
+  const hideModalEditar = () => {
+    setModalEditarVisible(false);
+    setUsuarioSeleccionado(null); // Limpiar el usuario seleccionado
+  };
+
   return (
     <div className="mu_container">
-        <div className="usuarios-container">
+      <div className="usuarios-container">
         <h1>Listado de usuarios</h1>
+
+        {/* Botón para agregar un usuario */}
         <div className="usuarios-header">
-            <button className="btn-agregar">+ Agregar usuario</button>
+          <button className="btn-agregar">+ Agregar Usuario</button>
         </div>
 
         <table className="usuarios-table">
-            <thead>
+          <thead>
             <tr>
-                <th>Username</th>
-                <th>Administrador</th>
-                <th>Permisos carga masiva</th>
-                <th>Empresa</th>
-                <th>Acciones</th>
+              <th>Username</th>
+              <th>Administrador</th>
+              <th>Permisos carga masiva</th>
+              <th>Empresa</th>
+              <th>Acciones</th>
             </tr>
-            </thead>
-            <tbody>
+          </thead>
+          <tbody>
             {usuarios.map((usuario) => (
-                <tr key={usuario.id}>
+              <tr key={usuario.id}>
                 <td>{usuario.username}</td>
                 <td>{usuario.administrador}</td>
                 <td>{usuario.permisos}</td>
                 <td>{usuario.empresa}</td>
                 <td>
-                    <button className="btn-cambiar">Cambiar contraseña</button>
-                    <button className="btn-editar">Editar</button>
-                    <button className="btn-eliminar">Eliminar</button>
+                  <div className="acciones-iconos">
+                    <button className="btn-cambiar">
+                      <i className="fa fa-key" aria-hidden="true"></i> {/* Ícono de llave */}
+                    </button>
+                    <button className="btn-editar" onClick={() => showModalEditar(usuario)}>
+                      <i className="fa fa-pencil" aria-hidden="true"></i> {/* Ícono de editar */}
+                    </button>
+                    <button className="btn-eliminar">
+                      <i className="fa fa-trash" aria-hidden="true"></i> {/* Ícono de eliminar */}
+                    </button>
+                  </div>
                 </td>
-                </tr>
+              </tr>
             ))}
-            </tbody>
+          </tbody>
         </table>
-        </div>
+
+        {modalEditarVisible && usuarioSeleccionado && (
+          <div className="modal-overlay">
+            <div className="md_editar">
+              <h2>Editar Usuario</h2>
+              <form>
+                <div className="modal-header-row">
+                  <div className="form-group">
+                    <label>Username:</label>
+                    <input type="text" value={usuarioSeleccionado.username} readOnly />
+                  </div>
+                  <div className="form-group">
+                    <label>Empresas:</label>
+                    <select value={usuarioSeleccionado.administrador}>
+                      <option value="SI">SI</option>
+                      <option value="NO">NO</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="modal-row">
+                  <div className="form-group">
+                    <label>Reportes SOD:</label>
+                    <input type="text" value={usuarioSeleccionado.empresa} />
+                  </div>
+                  <div className="form-group">
+                    <label>Reportes SOD (Carga Excel):</label>
+                    <select>
+                      <option value="lectura">Lectura</option>
+                      <option value="escritura">Escritura</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="modal-row">
+                  <div className="form-group">
+                    <label>Accesos Críticos (Carga Excel):</label>
+                    <select>
+                      <option value="lectura">Lectura</option>
+                      <option value="escritura">Escritura</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>Authority Check (Carga Excel):</label>
+                    <select>
+                      <option value="lectura">Lectura</option>
+                      <option value="escritura">Escritura</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="modal-row">
+                  <div className="form-group">
+                    <label>Reportes Usuarios (Carga Excel):</label>
+                    <select>
+                      <option value="lectura">Lectura</option>
+                      <option value="escritura">Escritura</option>
+                    </select>
+                  </div>
+                  <div className="form-group">
+                    <label>Parámetros Seguridad (Carga Excel):</label>
+                    <select>
+                      <option value="lectura">Lectura</option>
+                      <option value="escritura">Escritura</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div className="form-buttons-right">
+                  <button type="button" className="btn-eliminar">Eliminar</button>
+                  <button type="button" className="btn-cancelar" onClick={hideModalEditar}>Cancelar</button>
+                  <button type="submit" className="btn-guardar">Guardar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

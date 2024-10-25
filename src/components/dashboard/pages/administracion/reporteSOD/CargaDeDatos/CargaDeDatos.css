@@ -4,7 +4,7 @@
 }
 
 /* Título principal */
-.h1 {
+.cdd_container h1 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
@@ -17,22 +17,30 @@
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 1100px; /* Ajustar el tamaño máximo si es necesario */
+    max-width: 1100px;
     margin: 0 auto;
 }
 
 /* Formulario de carga */
 .carga-datos-form {
     display: grid;
-    grid-template-columns: repeat(3, 1fr) 200px; /* Tres columnas para inputs y una para botones */
+    grid-template-columns: repeat(3, 1fr) 200px; 
     gap: 20px;
-    align-items: center; /* Alinear los elementos verticalmente */
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background: #FFF;
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
+    width: 1003px;
+    height: 115px;
+    flex-shrink: 0;
+    padding: 10px;
 }
 
 .form-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 label {
@@ -46,30 +54,29 @@ select, input[type="file"] {
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
-    width: 100%; /* Ajusta al ancho total del contenedor */
+    width: 100%;
     box-sizing: border-box;
 }
 
-/* Botones de formulario en una sola línea */
+/* Botones de formulario */
 .form-group.buttons {
     display: flex;
-    justify-content: flex-start; /* Cambiar a flex-start para que los botones se alineen al principio de la columna */
+    justify-content: flex-end;
     gap: 10px;
-    grid-column: 4; /* Ocupa la cuarta columna de la cuadrícula */
-    flex-direction: row-reverse;
+    grid-column: 4;
 }
 
 .btn-cancelar, .btn-guardar {
-    padding: 8px 15px; /* Mejoramos el padding para que los botones tengan una altura uniforme */
+    padding: 8px 15px;
     font-size: 14px;
     cursor: pointer;
     border-radius: 5px;
-    white-space: nowrap; /* Evita que el texto se rompa */
+    white-space: nowrap;
 }
 
 .btn-cancelar {
-    background-color: #dc3545;
-    color: white;
+    background-color: #EBEFF4;
+    color: #000;
     border: none;
 }
 
@@ -80,26 +87,27 @@ select, input[type="file"] {
 }
 
 .btn-cancelar:hover {
-    background-color: #c82333;
+    background-color: #c1c6cb;
 }
 
 .btn-guardar:hover {
-    background-color: #0ABD8C;
+    background-color: #0abd7c;
 }
 
+.cd_table {
+    padding: 70px;
+}
 /* Tabla de cargas realizadas */
 .cargas-table {
     width: 100%;
     border-collapse: collapse;
     background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
 }
 
-.cargas-table th,
-.cargas-table td {
-    padding: 12px 15px;
+.cargas-table th, .cargas-table td {
+    padding: 10px;
     border: 1px solid #ddd;
     text-align: center;
 }
@@ -111,34 +119,39 @@ select, input[type="file"] {
     font-weight: bold;
 }
 
-/* Celdas de la tabla */
+/* Filas de la tabla */
 .cargas-table td {
     color: #555;
 }
 
-/* Botones de acciones */
-.btn-descargar, .btn-eliminar {
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+/* Alineación de iconos en Acciones */
+.acciones-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Iconos de acciones */
+.btn-icon {
+    background-color: transparent;
     border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
 }
 
-.btn-descargar {
-    background-color: #0ABD8C;
-    color: white;
-    margin-right: 10px;
+.btn-icon i {
+    color: #4C7AF9;
 }
 
-.btn-eliminar {
-    background-color: #dc3545;
-    color: white;
+.btn-icon:hover i {
+    color: #245cf4 ;
 }
 
-.btn-descargar:hover {
-    background-color: #0ABD8C
+.btn-icon .fa-trash {
+    color: #F86C6B;
 }
 
-.btn-eliminar:hover {
-    background-color: #c82333;
+.btn-icon:hover .fa-trash {
+    color: #c82333;
 }

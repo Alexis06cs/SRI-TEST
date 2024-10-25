@@ -188,7 +188,7 @@ input:hover {
     margin-bottom: 20px;
 }
 
-button {
+.btn_login {
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -199,7 +199,7 @@ button {
     margin-top: 10px;
 }
 
-button:hover {
+.btn_login:hover {
     background: #333;
 }
 

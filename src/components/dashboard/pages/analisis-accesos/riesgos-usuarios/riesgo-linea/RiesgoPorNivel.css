@@ -8,49 +8,83 @@
     border-radius: 10px;
 }
 
+.riesgo-container-card-2{
+    padding: 25px;
+    background-color: #ffffff;
+}
+
 .input-group {
     display: flex;
     align-items: center; /* Alinea verticalmente los elementos */
-    gap: 10px; /* Espacio entre los elementos */
+    gap: 20px; /* Espacio entre los elementos */
+    justify-content: flex-start; /* Mantiene los elementos alineados al inicio */
+    
+}
+
+.input-group input, .input-group label, .input-group .buscar-btn, .input-group .export-btn {
+    height: 40px; /* Asegura que todos los elementos tengan la misma altura */
+    display: flex;
+    align-items: center; /* Asegura que el contenido de los botones y el input esté centrado verticalmente */
+
 }
 
 .input-group label {
     margin-right: 10px; /* Espacio entre la etiqueta y el input */
 }
 
-.buscar-btn, .export-btn {
-    padding: 5px 10px; /* Añade un poco de padding a los botones */
-    cursor: pointer; /* Cambia el cursor al pasar sobre los botones */
+.buscar-btn {
+    padding: 10px 15px;
+    background-color: #0ABD8C;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: -9px
 }
 
+.buscar-btn:hover {
+    background-color: #0ABD8C;
+}
 
-.buscar-btn, .export-btn {
-    padding: 10px 15px;
-    background-color:   #0ABD8C;
+.export-btn {
+    margin-left: 90px;
+    margin-bottom: 27px; /* Esto empuja el botón de exportar hacia la derecha */
+    padding: 1px;
+    background-color: #0ABD8C;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
-.buscar-btn:hover, .export-btn:hover {
+
+.export-btn:hover {
     background-color: #0ABD8C;
 }
 
 .chart-container {
-    margin-top: 70px;
+    margin-top: 50px;
     text-align: center;
 }
 
 .doughnut-container {
     position: relative;
     width: 100%;
-    max-width: 400px; /* Ajusta el tamaño máximo del gráfico */
+    max-width: 600px; /* Aumenta el tamaño máximo del gráfico */
     margin: 0 auto;
+    height: 280px; /* Define la altura para darle más espacio vertical */
 }
 
+
 .table-container {
-    margin-top: 40px;
+    margin: 90px;
+}
+
+.table-container h2 {
+    text-align: left;
+    margin: 50px 0px;
+    padding: 20px;
+    font-size: 25px;
 }
 
 .table-container table {
@@ -61,12 +95,12 @@
 
 .table-container th, .table-container td {
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid #0ABD8C;
 }
 
 .table-container th {
-    background-color: #0ABD8C;
-    color: white;
+    background-color: #0ABD8C !important;
+    color: white !important;
 }
 
 .detalles-btn {
@@ -76,6 +110,7 @@
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    margin-left: 60px;
 }
 
 .detalles-btn:hover {
@@ -112,16 +147,20 @@
     text-align: center;
 }
 
-button {
+.rpn_button {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #0ABD8C;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: flex;
+    justify-content: center; /* Alinea horizontalmente el texto */
+    align-items: center;     /* Alinea verticalmente el texto */
+    text-align: center;      /* Asegura que el texto esté centrado en el botón */
 }
 
-button:hover {
-    background-color: #0056b3;
+.rpn_button:hover {
+    background-color: #0ABD8C;
 }

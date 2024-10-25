@@ -15,7 +15,7 @@ const RiesgoPorNivel = () => {
             {
                 label: 'Riesgo por Nivel',
                 data: [3480, 1208, 486],
-                backgroundColor: ['#FF6384', '#FFCE56', '#36A2EB'],
+                backgroundColor: ['#0ABD8C', '#5FCBE4', '#808080'],
                 hoverBackgroundColor: ['#FF6384', '#FFCE56', '#36A2EB'],
             },
         ],
@@ -47,13 +47,13 @@ const RiesgoPorNivel = () => {
 
     return (
         <div className="riesgo-container">
-            <div className='riesgo-container-card'>
+            <div className='riesgo-container-card-2'>
                 <h1>Riesgo por Nivel</h1>
 
                 {/* Input de fecha y botones */}
                 <div className="input-group">
                     <label htmlFor="fechaRiesgo">Fecha de Riesgo:</label>
-                    <input type="date" id="fechaRiesgo" />
+                    <input type="text" id="fechaRiesgo" placeholder='Buscar' />
                     <button className="buscar-btn">Buscar</button>
                     <button className="export-btn">Exportar como imagen</button>
                 </div>
@@ -106,7 +106,6 @@ const RiesgoPorNivel = () => {
                             </tr>
                         </tbody>
                     </table>
-                    <button className="export-btn">Exportar como Excel</button>
                 </div>
             </div>
 
@@ -145,7 +144,7 @@ const RiesgoPorNivel = () => {
                     </ul>
                   </ul>
               
-                  <button onClick={closeModal}>Cerrar</button>
+                  <button className='rpn_button' onClick={closeModal}>Cerrar</button>
                 </div>
               </div>
               

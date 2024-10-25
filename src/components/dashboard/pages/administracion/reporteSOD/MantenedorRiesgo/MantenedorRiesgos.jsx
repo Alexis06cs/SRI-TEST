@@ -13,9 +13,9 @@ const MantenedorRiesgos = () => {
     { id: 7, nombre: 'ZF29', descripcion: 'Manipular reports', procesoEmpresarial: 'Ciclo de compras' },
   ];
 
-  return ( 
-    <di className="mr_container"> 
-        <div className="mantenedor-riesgos-container">
+  return (
+    <div className="mr_container">
+      <div className="mantenedor-riesgos-container">
         <h1>Listado de Riesgos</h1>
         <table className="riesgos-table">
           <thead>
@@ -33,16 +33,21 @@ const MantenedorRiesgos = () => {
                 <td>{riesgo.descripcion}</td>
                 <td>{riesgo.procesoEmpresarial}</td>
                 <td>
-                  <button className="btn-editar">Editar</button>
-                  <button className="btn-eliminar">Eliminar</button>
+                  <div className="acciones-iconos">
+                    <button className="btn-icon">
+                      <i className="fa fa-pencil" aria-hidden="true"></i>
+                    </button>
+                    <button className="btn-icon">
+                      <i className="fa fa-trash" aria-hidden="true"></i>
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-    </di>
-      
+    </div>
   );
 };
 

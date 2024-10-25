@@ -131,7 +131,7 @@
 .input-group .buscar-btn,
 .input-group .export-btn {
     padding: 8px 15px;
-    background-color: #28a745;
+    background-color: #11c998;
     color: white;
     border: none;
     border-radius: 5px;
@@ -140,7 +140,7 @@
 
 .input-group .buscar-btn:hover,
 .input-group .export-btn:hover {
-    background-color: #218838;
+    background-color: #11c998;
 }
 
 /* Estilo del contenedor de gráficos */
@@ -204,5 +204,5 @@
 }
 
 .table-container .export-btn:hover {
-    background-color: #218838;
+    background-color: #11c998;
 }

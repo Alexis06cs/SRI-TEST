@@ -27,7 +27,7 @@ const Login = () => {
             <a href="/olvidaste">Olvidaste tu contraseña</a>
           </div>
           
-          <button type="submit">
+          <button className='btn_login' type="submit">
             Iniciar Sesión
           </button>
           

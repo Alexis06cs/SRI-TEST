@@ -1,8 +1,8 @@
 /* Contenedor principal */
-.mu_container{
+.mu_container {
     padding: 20px;
-
 }
+
 .usuarios-container {
     padding: 20px;
     background-color: #ffffff;
@@ -47,7 +47,7 @@
 
 .usuarios-table th,
 .usuarios-table td {
-    padding: 8px 10px; /* Ajusta el padding vertical para reducir la altura */
+    padding: 8px 10px;
     border: 1px solid #ddd;
     text-align: center;
 }
@@ -62,48 +62,219 @@
 /* Celdas de la tabla */
 .usuarios-table td {
     color: #555;
-    padding: 0px 1px;
 }
 
 /* Botones de acciones */
+.acciones-iconos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Cambiar contraseña: Ícono de llave con fondo personalizado */
 .btn-cambiar {
-    background-color: #28a745;
-    color: white;
+    background-color: #ECF1FF; /* Fondo azul claro */
+    color: #426AD7CC; /* Azul del ícono */
     border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-right: 10px;
+    border-radius: 50%; /* Botón circular */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
+.btn-cambiar i {
+    font-size: 18px;
+    color: #426AD7CC; /* Color azul personalizado del ícono */
+}
+
+/* Editar: Fondo verde claro y el ícono */
 .btn-editar {
-    background-color: #17a2b8;
-    color: white;
+    background-color: #DFF9F4; /* Fondo verde claro */
     border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    margin-right: 10px;
+    border-radius: 50%; /* Botón circular */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
+.btn-editar i {
+    font-size: 18px;
+    color: #11c998; /* Verde del ícono */
+}
+
+/* Eliminar: Fondo rojo claro y el ícono */
 .btn-eliminar {
-    background-color: #dc3545;
-    color: white;
+    background-color: #FFDADA; /* Fondo rojo claro */
     border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+    border-radius: 50%; /* Botón circular */
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+}
+
+.btn-eliminar i {
+    font-size: 18px;
+    color: #F86C6B; /* Rojo del ícono */
 }
 
 /* Hover de los botones */
 .btn-cambiar:hover {
-    background-color: #218838;
+    background-color: #d9e6ff;
 }
 
 .btn-editar:hover {
-    background-color: #138496;
+    background-color: #b9e8e2;
 }
 
 .btn-eliminar:hover {
-    background-color: #c82333;
+    background-color: #ffcccc;
+}
+
+/* Contenedor principal */
+.mu_container {
+    padding: 20px;
+}
+
+.usuarios-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+.mu_container {
+    padding: 20px;
+}
+
+.usuarios-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+.mu_container {
+    padding: 20px;
+}
+
+.usuarios-container {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Modal overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal editar usuario */
+.md_editar {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 700px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del modal */
+.md_editar h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo de los formularios */
+.modal-header-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+/* Botones del formulario */
+.form-buttons-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn-eliminar {
+    background-color: #F86C6B;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cancelar {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-guardar {
+    background-color: #11c998;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover,
+.btn-cancelar:hover,
+.btn-guardar:hover {
+    opacity: 0.9;
 }

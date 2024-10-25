@@ -1,5 +1,5 @@
 import React from 'react';
-import './CargaDeDatos.css'; // Asegúrate de crear este archivo CSS
+import './CargaDeDatos.css'; // Asegúrate de que este archivo contiene los estilos
 
 const CargaDeDatos = () => {
   // Datos ficticios para las cargas realizadas
@@ -14,73 +14,79 @@ const CargaDeDatos = () => {
   ];
 
   return (
-    
-
     <div className="cdd_container">
+      <div className="carga-datos-container">
         <h1>Agregar Riesgos desde Excel</h1>
-       <div className="carga-datos-container">
         
         {/* Formulario para cargar archivo */}
         <div className="carga-datos-form">
-                <div className="form-group">
-                <label htmlFor="empresa">Empresa:</label>
-                <select id="empresa">
-                    <option>Seleccione una empresa</option>
-                    <option>Minuto verde</option>
-                    <option>Cliente</option>
-                    <option>Compass Group</option>
-                </select>
-                </div>
+          <div className="form-group">
+            <label htmlFor="empresa">Empresa:</label>
+            <select id="empresa">
+              <option>Seleccione una empresa</option>
+              <option>Minuto verde</option>
+              <option>Cliente</option>
+              <option>Compass Group</option>
+            </select>
+          </div>
 
-                <div className="form-group">
-                <label htmlFor="fechaRiesgo">Fecha de Riesgo:</label>
-                <select id="fechaRiesgo">
-                    <option>Seleccione una fecha</option>
-                    <option>17/06/21</option>
-                    <option>24/06/21</option>
-                    <option>06/06/21</option>
-                </select>
-                </div>
+          <div className="form-group">
+            <label htmlFor="fechaRiesgo">Fecha de Riesgo:</label>
+            <select id="fechaRiesgo">
+              <option>Seleccione una fecha</option>
+              <option>17/06/21</option>
+              <option>24/06/21</option>
+              <option>06/06/21</option>
+            </select>
+          </div>
 
-                <div className="form-group">
-                <label htmlFor="archivo">Archivo:</label>
-                <input type="file" id="archivo" />
-                </div>
+          <div className="form-group">
+            <label htmlFor="archivo">Archivo:</label>
+            <input type="file" id="archivo" />
+          </div>
 
-                <div className="form-group buttons">
-                <button className="btn-cancelar">Cancelar</button>
-                <button className="btn-guardar">Guardar</button>
-                </div>
+          <div className="form-group buttons">
+            <button className="btn-cancelar">Cancelar</button>
+            <button className="btn-guardar">Guardar</button>
+          </div>
         </div>
 
         {/* Tabla de Cargas Realizadas */}
-        <h2>Cargas Realizadas</h2>
-        <table className="cargas-table">
+        <div className='cd_table'>
+            <h2>Cargas Realizadas</h2>
+            <table className="cargas-table">
             <thead>
-            <tr>
+                <tr>
                 <th>Fecha de Riesgo</th>
                 <th>Fecha de Carga</th>
                 <th>Empresa</th>
                 <th>Usuario</th>
                 <th>Acciones</th>
-            </tr>
+                </tr>
             </thead>
             <tbody>
-            {cargas.map((carga) => (
+                {cargas.map((carga) => (
                 <tr key={carga.id}>
-                <td>{carga.fechaRiesgo}</td>
-                <td>{carga.fechaCarga} {carga.horaCarga}</td>
-                <td>{carga.empresa}</td>
-                <td>{carga.usuario}</td>
-                <td>
-                    <button className="btn-descargar">Descarga</button>
-                    <button className="btn-eliminar">Eliminar</button>
-                </td>
+                    <td>{carga.fechaRiesgo}</td>
+                    <td>{carga.fechaCarga} {carga.horaCarga}</td>
+                    <td>{carga.empresa}</td>
+                    <td>{carga.usuario}</td>
+                    <td>
+                    <div className="acciones-iconos">
+                        <button className="btn-icon">
+                        <i className="fa fa-download" aria-hidden="true"></i>
+                        </button>
+                        <button className="btn-icon">
+                        <i className="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    </td>
                 </tr>
-            ))}
+                ))}
             </tbody>
-        </table>
+            </table>
         </div>
+      </div>
     </div>
   );
 };
